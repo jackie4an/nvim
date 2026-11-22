@@ -38,7 +38,7 @@ local options = {
     },
 
     pg_format = {
-      prepend_args = { "-s", "2", "-W", "2" },
+      prepend_args = { "-s", "2", "--no-space-function" },
     },
   },
 
