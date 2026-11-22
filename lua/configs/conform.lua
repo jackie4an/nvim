@@ -19,6 +19,12 @@ local options = {
     cpp = {
       "clang_format",
     },
+    sql = {
+      "pg_format",
+    },
+    pgsql = {
+      "pg_format",
+    },
   },
 
   formatters = {
@@ -30,6 +36,10 @@ local options = {
     clang_format = {
       prepend_args = { "--style=file", "--fallback-style=Mozilla" },
     },
+
+    pg_format = {
+      prepend_args = { "-s", "2", "-W", "2" },
+    },
   },
 
   format_on_save = {
@@ -38,3 +48,5 @@ local options = {
     lsp_fallback = true,
   },
 }
+
+return options
